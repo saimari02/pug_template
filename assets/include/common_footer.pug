@@ -1,0 +1,46 @@
+include /_include/_const
+
+footer.l-footer(role="contentinfo")
+	.p-footer__inner
+		.p-footer__container.c-container--nomg
+			nav.p-footer-nav(role="navigation")
+				ul.p-footer-nav__lang.p-footer-nav__list
+					li.p-footer-nav__lang--active Japanese
+					li
+						a.p-footer-nav__lang--link(href="/english/",lang="en") English
+				ul.p-footer-nav__menu.p-footer-nav__list
+					li.p-footer-nav__item
+						a.p-footer-nav__link(href="/news/") NEWS
+					li.p-footer-nav__item
+						a.p-footer-nav__link(href="/service/") SERVICE
+					li.p-footer-nav__item
+						a.p-footer-nav__link(href="/company/") COMPANY
+					li.p-footer-nav__item
+						a.p-footer-nav__link(href="/recruit/") RECRUIT
+					li.p-footer-nav__item
+						a.p-footer-nav__link(href="/contact/") CONTACT
+				ul.p-footer-nav__menu-lower.p-footer-nav__list
+					li.p-footer-nav__item
+						a.p-footer-nav__link(href="/about/") このサイトについて
+					li.p-footer-nav__item
+						a.p-footer-nav__link(href="/privacy/") 個人情報保護方針
+					li.p-footer-nav__item
+						a.p-footer-nav__link(href="/sitemap/") サイトマップ
+			.p-footer__logo
+				p.p-footer__logo-image
+					img(src=`${COMMON_IMG_DIRECTORY}logo_intage_wh.svg`, alt="株式会社インテージヘルスケア")
+			ul.p-footer-sns.p-sns-list
+				li.p-sns-list__item
+					a.p-sns-list__icon(href="https://www.facebook.com/intagegroup/",target="_blank",rel="noopener noreferrer")
+						img(src=`${COMMON_IMG_DIRECTORY}icon_facebook_blk.svg`, alt="facebook")
+				li.p-sns-list__item
+					a.p-sns-list__icon(href="https://twitter.com/intage_pr",target="_blank",rel="noopener noreferrer")
+						img(src=`${COMMON_IMG_DIRECTORY}icon_twitter_blk.svg`, alt="twitter")
+				li.p-sns-list__item
+					a.p-sns-list__icon(href="https://www.youtube.com/user/intageChannel",target="_blank",rel="noopener noreferrer")
+						img(src=`${COMMON_IMG_DIRECTORY}icon_youtube_blk.svg`, alt="youtube")
+	.p-footer-credit
+		.c-container--mg.u-flex.u-flex-juct--between
+			small.p-footer-credit__copy(lang="en") Copyright © INTAGE Healthcare Inc. All Rights Reserved.
+			a.p-footer-credit__logo(href="http://www.intageholdings.co.jp/",target="_blank",rel="noopener noreferrer")
+				img(src=`${COMMON_IMG_DIRECTORY}logo_intageG.svg`, alt="Know today, Power tomorrow INTAGE GROUP")

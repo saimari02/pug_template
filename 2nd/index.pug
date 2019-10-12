@@ -1,0 +1,27 @@
+extends /_include/_layout
+
+//-　ページ独自の設定[head]
+append pagedata
+	- const pagePrefix = "article"; // Select [website]or[article]
+	- const searchIndex = "true"; // Select [true]or[false]
+	- const pageDirectory = "2nd";	// Select [1st]or[2nd]or[3rd]...
+	- const pageSlag = "hoge";  // for URL
+	- const pageTitle = "第二階層のタイトル"; // <title>
+	- const pageDescription = "descriptionを記入してください";	// <meta description> <meta og:description>
+	- const contactURL = "URL"; // Contact URL pass
+
+//- ページ独自のcss
+append pagecss
+	link(rel="stylesheet", href=`${COMMON_CSS_DIRECTORY}page/page.min.css`)
+
+//- ページ独自のjs[head内]
+append pagejs-head
+
+//- ページのコンテンツ
+block main
+	main.l-main(role="main")
+		section
+			h1 #{pageSlag}
+		|
+		|
+		include /_include/_inquiry

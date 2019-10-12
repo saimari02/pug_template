@@ -1,0 +1,60 @@
+include /_include/_const
+block wordpressRead
+|
+|
+block pagedata
+doctype html
+html(lang="ja")
+	head(prefix=`og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# ${pagePrefix}: http://ogp.me/ns/${pagePrefix}#`)
+		//- common meta
+		include /_include/_meta
+		|
+		//- common Link
+		include /_include/_link
+		|
+		//- page css
+		block pagecss
+		|
+		//- common JavaScript
+		include /_include/_script
+		|
+		//- page JavaScript
+		block pagejs
+
+		// [ GTM ]
+		|
+		|
+		<?php include($_SERVER["DOCUMENT_ROOT"]."#{COMMON_INCLUDE}gtm_head.html"); ?>
+		// /[ GTM ]
+	body
+		// [ GTM - noscript ]
+		|
+		|
+		<?php include($_SERVER["DOCUMENT_ROOT"]."#{COMMON_INCLUDE}gtm_body.html"); ?>
+		// /[ GTM - noscript ]
+		.l-wrapper
+			// [ global-header ]
+			|
+			|
+			<?php include($_SERVER["DOCUMENT_ROOT"]."#{COMMON_INCLUDE}common_header.html"); ?>
+			// / [ global-header ]
+			|#{"\n"}
+			if pageDirectory !== "1st"
+				include /_include/_breadcrumb
+			|#{"\n"}
+			// [ main-content ]
+			block main
+			// / [ main-content ]
+			| #{"\n"}
+			// [ global-footer ]
+			|
+			|
+			<?php include($_SERVER["DOCUMENT_ROOT"]."#{COMMON_INCLUDE}common_footer.html"); ?>
+			// / [ global-footer ]
+		//- noscript
+		noscript.
+			<div class="u-text--center">
+			<h1 class="c-lead u-weight--bold u-mt--regular">このページは JavaScript を使用しています。</h1>
+			<p class="c-text">お使いのブラウザーは JavaScript が無効になっているか、JavaScript に対応していません。<br>対応しているブラウザーでアクセスしてください。</p>
+			<p class="c-text">すべての機能を利用するためには、有効に設定していただくか、JavaScript に対応しているブラウザーでアクセスしてください。</p>
+			</div>

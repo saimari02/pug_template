@@ -1,0 +1,32 @@
+meta(charset="utf-8")
+if searchIndex == "false"
+	meta(name="robots",content="noindex,nofollow")
+meta(http-equiv="X-UA-Compatible" content="IE=edge")
+meta(name="viewport" content="width=device-width, initial-scale=1.0")
+meta(name="format-detection",content="telephone=no")
+meta(name="theme-color",content="#fff")
+meta(name="application-name",content=`${COMPANY_NAME}`)
+meta(name="msapplication-TileColor",content="#fff")
+meta(name="msapplication-config",content="/browserconfig.xml")
+meta(name="description",content=`${pageDescription}`)
+// 第一階層
+if pageDirectory == "1st"
+	title #{COMPANY_NAME}
+	meta(property="og:title",content=`${COMPANY_NAME}`)
+	meta(property="og:url",content=`${DOMAIN}`)
+// 第二階層
+else if pageDirectory == "2nd"
+	title #{pageTitle}｜#{COMPANY_NAME}
+	meta(property="og:title",content=`${pageTitle}｜${COMPANY_NAME}`)
+	meta(property="og:url",content=`${DOMAIN}/${pageSlag}/`)
+// 第三階層
+else if pageDirectory == "3rd"
+	title #{pageTitle}｜#{directory02Title}｜#{COMPANY_NAME}
+	meta(property="og:title",content=`${pageTitle}｜${directory02Title}｜${COMPANY_NAME}`)
+	meta(property="og:url",content=`${DOMAIN}/${directory02Slag}/${pageSlag}/`)
+meta(property="og:image",content=`${DOMAIN}${COMMON_IMG_DIRECTORY}og.png`)
+meta(property="og:description",content!=`${pageDescription}`)
+meta(property="og:type",content=`${pagePrefix}`)
+meta(property="og:locale",content="ja_JP")
+meta(property="og:site_name" content= `${COMPANY_NAME}`)
+meta(name="twitter:card",content="summary_large_image")

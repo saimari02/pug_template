@@ -1,0 +1,31 @@
+// [ breadcrumb ]
+|
+|
+//- パンくずリスト
+else if pageDirectory == "2nd"
+	nav.p-breadcrumb.c-container--mg-plus(role="navigation",aria-label="現在位置")
+		ol.p-breadcrumb__list(itemscope,itemtype="http://schema.org/BreadcrumbList")
+			li.p-breadcrumb__item(itemprop="itemListElement",itemscope,itemtype="http://schema.org/ListItem")
+				a.p-breadcrumb__link.c-text-link(href="/",itemprop="item")
+					span(itemprop="name") TOPページ
+					meta(itemprop="position",content="1")
+			li.p-breadcrumb__item(itemprop="itemListElement",itemscope,itemtype="http://schema.org/ListItem")
+				a.p-breadcrumb__link(href=`/${pageSlag}/`,itemprop="item",aria-current="page")
+					span(itemprop="name") #{pageTitle}
+					meta(itemprop="position",content="2")
+else if pageDirectory == "3rd"
+	nav.p-breadcrumb.c-container--mg-plus(role="navigation",aria-label="現在位置")
+		ol.p-breadcrumb__list(itemscope,itemtype="http://schema.org/BreadcrumbList")
+			li.p-breadcrumb__item(itemprop="itemListElement",itemscope,itemtype="http://schema.org/ListItem")
+				a.p-breadcrumb__link.c-text-link(href="/",itemprop="item")
+					span(itemprop="name") TOPページ
+					meta(itemprop="position",content="1")
+			li.p-breadcrumb__item(itemprop="itemListElement",itemscope,itemtype="http://schema.org/ListItem")
+				a.p-breadcrumb__link.c-text-link(href=`/${directory02Slag}/`,itemprop="item")
+					span(itemprop="name") #{directory02Title}
+					meta(itemprop="position",content="2")
+			li.p-breadcrumb__item(itemprop="itemListElement",itemscope,itemtype="http://schema.org/ListItem")
+				a.p-breadcrumb__link(href=`/${directory02Slag}/${pageSlag}/`,itemprop="item",aria-current="page")
+					span(itemprop="name") #{pageTitle}
+					meta(itemprop="position",content="3")
+// / [ breadcrumb ]

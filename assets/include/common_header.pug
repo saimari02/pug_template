@@ -1,0 +1,188 @@
+include /_include/_const
+header.l-header.p-header(role="banner")
+	.p-header__announce
+		.c-container--mg-plus
+			strong
+				a.p-header__announce-text-link(href="/company/aboutus/") 株式会社アンテリオ・株式会社アスクレップの経営統合について
+					span.p-header__announce-icon.c-icon.c-icon--arrow-right(role="img",aria-label="内部リンク")
+	.c-container--mg-plus
+		p.p-header__logo
+			a.p-header__logo-link(href="/")
+				img(src=`${COMMON_IMG_DIRECTORY}logo_intage.svg` alt="インテージヘルスケア")
+	.p-header__button
+		//- trueにするとボタンオープン
+		button#menu-button.c-header-button.p-header-button--menu(type="button",aria-label="サイトメニューを展開",aria-controls="menu-content",aria-expanded="false")
+			.c-header-button
+				span.p-header-button--menu__icon
+				span.c-header-button__text.p-header-button--menu__text
+		button#search-button.c-header-button.p-header-button--search.u-hidden-sm(type="button",aria-label="サイト内検索ボックスを展開",aria-controls="searh-content",aria-expanded="false")
+			.c-header-button
+				span.p-header-button--search__icon
+				span.c-header-button__text.p-header-button--search__text
+		a.c-header-button.p-header-button--lang(href="/english/",aria-label="英語サイトへのリンク")
+			span.p-header-button--lang__icon
+			span.c-header-button__text ENGLISH
+	.p-header__scroll
+		span.p-header__scroll-text Scroll
+		span.p-header__scroll-image
+			img(src=`${COMMON_IMG_DIRECTORY}icon_arrow_header.svg` alt="下へスクロール")
+	//- falseでメニュー展開
+	.p-header__nav#menu-content(aria-hidden="true",aria-labelledby="menu-button")
+		.p-header__search#search-content.u-hidden-lg
+			.gcse-searchbox-only(enableHistory="true",data-resultsUrl="/search_result/")
+		nav.p-nav(role="navigation",aria-label="サイトメニュー一覧")
+			ul.p-nav__list.p-nav__list--global
+				//NEWS
+				li.p-nav__item
+					//- trueにするとメニュー展開
+					a.p-nav__link.p-nav__link--first(href="#nav-news",aria-expanded="false",aria-controls="#nav-news",role="tab") news
+					//- falseにするとメニュー展開
+					#nav-news.p-nav-content(aria-hidden="true",role="tabpanel")
+						.p-nav-content__inner.p-nav-content__inner--lv1
+							p.p-nav-content__title.p-nav-content__title--lv1
+								a.p-nav-content__link.title(href="/news/") news
+									span.u-hidden-lg トップ
+							ul.p-nav-content__subpages.p-nav-column--half
+								li.p-nav-column__item
+									a.p-nav-content__link.sub(href="/news/release/") プレスリリース
+								li.p-nav-column__item
+									a.p-nav-content__link.sub(href="/news/report/") 調査レポート
+								li.p-nav-column__item
+									a.p-nav-content__link.sub(href="/news/event/") イベント・セミナー
+								li.p-nav-column__item
+									a.p-nav-content__link.sub(href="/news/info/") お知らせ
+				|
+				|
+				//SERVICE
+				li.p-nav__item
+					//- trueにするとメニュー展開
+					a.p-nav__link.p-nav__link--first(href="#nav-service",aria-expanded="false",aria-controls="#nav-service",role="tab") service
+					//- falseにするとメニュー展開
+					#nav-service.p-nav-content(aria-hidden="true",role="tabpanel")
+						.p-nav-content__inner.p-nav-content__inner--lv1
+							p.p-nav-content__title.p-nav-content__title--lv1
+								a.p-nav-content__link.title(href="/service/") service
+									span.u-hidden-lg トップ
+						ul
+							li.p-nav-content__subpages
+								p.p-nav-content__title.p-nav-content__title--lv2
+									a.p-nav-content__link.sub(href="/service/research/") Marketing Research
+								.p-nav-content__inner.p-nav-content__inner--lv2
+									ul.p-nav-column.p-nav-column--02
+										li.p-nav-column__item
+											a.p-nav-content__link.page(href="/service/research/otc/") 一般医薬品市場調査
+										li.p-nav-column__item
+											a.p-nav-content__link.page(href="/service/research/rx/") 医療用医薬品市場調査
+										li.p-nav-column__item
+											a.p-nav-content__link.page(href="/service/research/device/") 医療機器市場調査
+										li.p-nav-column__item
+											a.p-nav-content__link.page(href="/service/research/heor/") 医療経済・アウトカムリサーチ (HEOR)
+										li.p-nav-column__item
+											a.p-nav-content__link.page(href="/service/research/global/") グローバルサービス
+							li.p-nav-content__subpages
+								p.p-nav-content__title.p-nav-content__title--lv2
+									a.p-nav-content__link.sub(href="/service/cro/") CRO
+								.p-nav-content__inner.p-nav-content__inner--lv2
+									ul.p-nav-column.p-nav-column--02
+										li.p-nav-column__item
+											a.p-nav-content__link.page(href="/service/cro/gcp/") 臨床試験支援（GCP）
+										li.p-nav-column__item
+											a.p-nav-content__link.page(href="/service/cro/pms/") 製造販売後調査支援（GPSP）
+										li.p-nav-column__item
+											a.p-nav-content__link.page(href="/service/cro/pms-solution/") PMSソリューション
+										li.p-nav-column__item
+											a.p-nav-content__link.page(href="/service/cro/safety/") 安全性情報（GVP）
+										li.p-nav-column__item
+											a.p-nav-content__link.page(href="/service/cro/db/") DB研究・DB調査
+										li.p-nav-column__item
+											a.p-nav-content__link.page(href="/service/cro/lineup/") サービスラインナップ
+							li.p-nav-content__subpages
+								p.p-nav-content__title.p-nav-content__title--lv2
+									a.p-nav-content__link.sub(href="/service/other-solutions/") Other Solutions
+								.p-nav-content__inner.p-nav-content__inner--lv2
+									ul.p-nav-column.p-nav-column--02
+										li.p-nav-column__item
+											a.p-nav-content__link.page(href="/service/other-solutions/insilico/") 創薬支援事業
+										li.p-nav-column__item
+											a.p-nav-content__link.page(href="/service/other-solutions/czeekvr/") 有害事象情報データベース・システム／データ解析支援
+										li.p-nav-column__item
+											a.p-nav-content__link.page(href="/service/other-solutions/ditrack/") 医薬品DB（DI Track）
+										li.p-nav-column__item
+											a.p-nav-content__link.page.external(href="https://ecoqolo.com/",target="_blank",rel="noopener noreferrer") 患者会支援サービス
+													span(aria-label="外部リンク")
+										li.p-nav-column__item
+											a.p-nav-content__link.page.external(href="https://www.jmiri.jp/",target="_blank",rel="noopener noreferrer") 処方情報分析（JMIRI）
+													span(aria-label="外部リンク")
+										li.p-nav-column__item
+											a.p-nav-content__link.page.external(href="https://www.kk-kyowa.co.jp/",target="_blank",rel="noopener noreferrer") プロモーション支援（協和企画）
+													span(aria-label="外部リンク")
+				|
+				|
+				//COMPANY
+				li.p-nav__item
+					//- trueにするとメニュー展開
+					a.p-nav__link.p-nav__link--first(href="#nav-company",aria-expanded="false",aria-controls="#nav-company",role="tab") company
+					//- falseにするとメニュー展開
+					#nav-company.p-nav-content(aria-hidden="true",role="tabpanel")
+						.p-nav-content__inner.p-nav-content__inner--lv1
+							p.p-nav-content__title.p-nav-content__title--lv1
+								a.p-nav-content__link.title(href="/company/") company
+									span.u-hidden-lg トップ
+							ul.p-nav-content__subpages.p-nav-column--half
+								li.p-nav-column__item
+									a.p-nav-content__link.sub(href="/company/message/") トップメッセージ
+								li.p-nav-column__item
+									a.p-nav-content__link.sub(href="/company/aboutus/") インテージヘルスケアに
+										br.u-hidden-sm(aria-hidden="true")
+										| ついて
+								li.p-nav-column__item
+									a.p-nav-content__link.sub(href="/company/info/") 会社概要
+								li.p-nav-column__item
+									a.p-nav-content__link.sub(href="/company/access/") アクセスマップ
+								li.p-nav-column__item
+									a.p-nav-content__link.sub.external(href="http://www.intageholdings.co.jp/company/intagegroups",target="_blank",rel="noopener noreferrer") インテージグループ
+										span(aria-label="外部リンク")
+				|
+				|
+				//RECRUIT
+				li.p-nav__item
+					//- trueにするとメニュー展開
+					a.p-nav__link.p-nav__link--first(href="#nav-recruit",aria-expanded="false",aria-controls="#nav-recruit",role="tab") recruit
+					//- falseにするとメニュー展開
+					#nav-recruit.p-nav-content(aria-hidden="true",role="tabpanel")
+						.p-nav-content__inner.p-nav-content__inner--lv1
+							p.p-nav-content__title.p-nav-content__title--lv1
+								a.p-nav-content__link.title(href="/recruit/") recruit
+									span.u-hidden-lg トップ
+							ul.p-nav-content__subpages.p-nav-column--half
+								li.p-nav-column__item
+									a.p-nav-content__link.sub(href="/recruit/newgraduates/") 新卒採用
+								li.p-nav-column__item
+									a.p-nav-content__link.sub(href="/recruit/careers/") キャリア採用
+				|
+				|
+				//CONTACT
+				li.p-nav__item
+					//- trueにするとメニュー展開
+					a.p-nav__link.p-nav__link--first(href="#nav-contact",aria-expanded="false",aria-controls="#nav-contact",role="tab") contact
+					//- falseにするとメニュー展開
+					#nav-contact.p-nav-content(aria-hidden="true",role="tabpanel")
+						.p-nav-content__inner.p-nav-content__inner--lv1
+							p.p-nav-content__title.p-nav-content__title--lv1
+								a.p-nav-content__link.title(href="/contact/") contact
+									span.u-hidden-lg トップ
+							ul.p-nav-content__subpages.p-nav-column--half
+								li.p-nav-column__item
+									a.p-nav-content__link.sub(href="/contact/service/") サービスに関するお問い合わせ
+								li.p-nav-column__item
+									a.p-nav-content__link.sub(href="/contact/other/") 企業へのお問い合わせ
+								li.p-nav-column__item
+									a.p-nav-content__link.sub(href="/contact/recruit/") キャリア採用応募フォーム
+	//- falseにするとフィルター展開
+	.p-header__filter(aria-hidden="true")
+	//- falseで検索ボックス展開
+	.p-header__search#search-content.u-hidden-sm(aria-hidden="true",aria-labelledby="search-button")
+		.gcse-searchbox-only(enableHistory="true",data-resultsUrl="/search_result/")
+button.c-header-button.p-header-button--top.u-hidden-sm(type="button",aria-label="ページ上部に戻る")
+	.c-header-button
+		span.p-header-button--top__icon

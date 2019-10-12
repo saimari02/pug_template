@@ -1,0 +1,7 @@
+section
+	.p-sns-share
+		h3.p-sns-share__text(aria-label="記事をSNSでシェアする") SHARE
+		a(href!= `https://www.facebook.com/sharer/sharer.php?u=${DOMAIN}/${directory02Slag}/${pageSlag}/`,target="_blank",title="Facebookでシェア",rel="noopener noreferrer")
+			img(src=`${COMMON_IMG_DIRECTORY}icon_facebook.svg`, alt="facebook")
+		a(href!= `https://twitter.com/intent/tweet?url=${DOMAIN}/${directory02Slag}/${pageSlag}/&text=${pageTitle}｜${directoryTitle02}｜${COMPANY_NAME}`,target="_blank",title="Twitterシェア",rel="noopener noreferrer")
+			img(src=`${COMMON_IMG_DIRECTORY}icon_twitter.svg`, alt="twitter")
